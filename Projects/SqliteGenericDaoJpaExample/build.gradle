@@ -1,0 +1,30 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+jar {
+	baseName = 'SqliteGenericDaoJpaExample'
+	version = '0.0.1-SNAPSHOT'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.slf4j:slf4j-api:1.7.21'
+
+	compile group: 'org.hibernate', name: 'hibernate-core', version: '5.2.1.Final'
+	
+	compile group: 'org.javassist', name: 'javassist', version: '3.20.0-GA'
+	
+	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.4'
+	
+	compile group: 'org.xerial', name: 'sqlite-jdbc', version: '3.8.11.2'
+	
+	compile group: 'net.kemitix', name: 'sqlite-dialect', version: '0.1.0'
+
+    testCompile 'junit:junit:4.12'
+}
